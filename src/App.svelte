@@ -1,5 +1,5 @@
 <script>
-  import TextfieldHealth from './components/atoms/TextfieldHealth.svelte'
+  import TextfieldHealth from './objects/TextfieldHealth.svelte'
 </script>
 
 <style>

@@ -1,1 +1,3 @@
-@import './css/reset.css';
+@import './css/settings/size.css';
+@import './css/generic/reset.css';
+@import './css/elements/base.css';

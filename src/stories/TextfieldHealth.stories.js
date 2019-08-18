@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/svelte'
-import TextfieldHealth from './components/atoms/TextfieldHealthView.svelte'
+import TextfieldHealth from './objects/TextfieldHealthView.svelte'
 
 storiesOf('TextfieldHealth', module).add('Default', () => ({
   Component: TextfieldHealth,
