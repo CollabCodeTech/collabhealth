@@ -3,6 +3,7 @@
 ```bash
 git clone https://github.com/CollabCodeTech/collabhealth
 cd collabhealth
+npm i
 npm run dev
 ```
 
@@ -10,5 +11,6 @@ npm run dev
 
 ```bash
 cd collabhealth
+npm i
 npm run storybook
 ```
