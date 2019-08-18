@@ -1,11 +1,11 @@
 <script>
-	export let name;
+  import TextfieldHealth from "./components/atoms/TextfieldHealth.svelte";
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  h1 {
+    color: purple;
+  }
 </style>
 
-<h1>Hello {name}!</h1>
+<TextfieldHealth placeholder="Equipamento" />
