@@ -1,4 +1,4 @@
-import { configure, addParameters } from '@storybook/svelte'
+import { configure, addParameters, addDecorator } from '@storybook/svelte'
 
 import '../public/global.css'
 
@@ -8,6 +8,13 @@ function loadStories() {
 }
 
 const newViewports = {
+  iPhone5se: {
+    name: 'iPhone 5/SE',
+    styles: {
+      width: '320px',
+      height: '568px',
+    },
+  },
   galaxyS9: {
     name: 'Galaxy S9/S9+',
     styles: {
