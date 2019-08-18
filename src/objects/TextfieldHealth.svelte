@@ -4,6 +4,8 @@
 
 <style>
   .textfield-health {
+    font-size: var(--size-third);
+    font-weight: normal;
   }
 </style>
 
