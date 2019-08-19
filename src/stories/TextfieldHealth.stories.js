@@ -32,6 +32,15 @@ storiesOf('TextfieldHealth', module)
       dark: true,
     },
   }))
+  .add('Required with error message', () => ({
+    Component: TextfieldHealth,
+    props: {
+      label: 'Email',
+      required: true,
+      type: 'email',
+      messageError: 'Email inválido',
+    },
+  }))
   .add('Dark Required with error message', () => ({
     Component: TextfieldHealth,
     props: {
