@@ -1,8 +1,9 @@
 <script>
   export let required = false
-  export let label = 'Label not defined'
+  export let label = 'label not defined'
   export let type = 'text'
   export let className = ''
+  export let messageError = false
   export let dark = false
 
   let fill = false
@@ -26,7 +27,8 @@
 <style>
   .textfield-health {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     background-color: var(--color-gray-light);
     font-size: var(--size-third);
@@ -164,6 +166,23 @@
     box-shadow: none;
   }
 
+  .textfield-health > .error {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(150%);
+    color: var(--color-error-dark);
+    opacity: 0;
+    transition: opacity 100ms 200ms linear;
+  }
+
+  .textfield-health.invalid > .error {
+    opacity: 1;
+  }
+
+  .dark.textfield-health > .error {
+    color: var(--color-dark-error-dark);
+  }
+
   @keyframes labelError {
     33% {
       transform: scale(0.75) translate(5px, -10px);
@@ -186,4 +205,7 @@
   on:focusin={handleFocusin}>
   <span class="label">{label}</span>
   <input class="input" {type} {required} on:invalid|preventDefault />
+  {#if messageError}
+    <span class="error">{messageError}</span>
+  {/if}
 </label>

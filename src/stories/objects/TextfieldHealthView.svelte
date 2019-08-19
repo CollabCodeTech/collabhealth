@@ -3,6 +3,8 @@
   export let required
   export let type
   export let dark
+  export let messageError
+
   import TextfieldHealph from '../../objects/TextfieldHealth.svelte'
 </script>
 
@@ -17,5 +19,5 @@
 </style>
 
 <div class={`${dark ? 'dark' : ''}`}>
-  <TextfieldHealph {label} {required} {type} {dark} />
+  <TextfieldHealph {label} {required} {type} {dark} {messageError} />
 </div>
