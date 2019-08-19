@@ -3,13 +3,13 @@
   --size-border-focus: 2px;
 
   --size-zero: 10px;
-  --size-first: 1.2rem;
-  --size-second: 1.4rem;
-  --size-third: 1.6rem;
-  --size-fourth: 2rem;
-  --size-fifth: 2.4rem;
-  --size-sixth: 3.4rem;
-  --size-seventh: 4.8rem;
-  --size-eighth: 6rem;
-  --size-nineth: 9.6rem;
+  --size-first: 12px;
+  --size-second: 14px;
+  --size-third: 16px;
+  --size-fourth: 20px;
+  --size-fifth: 24px;
+  --size-sixth: 34px;
+  --size-seventh: 48px;
+  --size-eighth: 60px;
+  --size-nineth: 96px;
 }

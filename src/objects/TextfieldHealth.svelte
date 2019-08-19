@@ -1,5 +1,6 @@
 <script>
-  export let placeholder
+  export let required = false
+  export let label = 'Label not defined'
 </script>
 
 <style>
@@ -12,6 +13,7 @@
     font-weight: normal;
     border-radius: var(--gap-radius) var(--gap-radius) 0 0;
     padding: var(--gap-second);
+    border-bottom: var(--size-border) solid var(--color-black-disabled);
   }
 
   .textfield-health::after {
@@ -21,16 +23,47 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: var(--size-border);
+    height: var(--size-border-focus);
+    transform: scaleX(0) translateY(100%);
+    transition: transform 200ms linear;
+  }
+
+  .textfield-health:focus-within::after {
+    transform: scaleX(1) translateY(100%);
+    background-color: var(--color-primary-900);
+  }
+
+  .textfield-health > .label {
+    position: absolute;
+    left: var(--gap-second);
+    transition: transform 200ms linear;
+    transform-origin: left top;
+  }
+
+  .textfield-health > .label::selection {
+    background-color: none;
+  }
+
+  .textfield-health:focus-within > .label,
+  .textfield-health > .input:not(:empty) + .label {
+    color: var(--color-primary-900);
+    transform: scale(0.75) translateY(-10px);
   }
 
   .textfield-health > .input {
     background-color: transparent;
     width: 100%;
     height: 100%;
+    transform-origin: left bottom;
+    transition: transform 200ms linear;
+  }
+
+  .textfield-health:focus-within > .input {
+    transform: translateY(8px);
   }
 </style>
 
 <label class="textfield-health">
-  <input class="input" type="text" {placeholder} />
+  <input class="input" type="text" {required} />
+  <span class="label">{label}</span>
 </label>

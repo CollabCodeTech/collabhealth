@@ -4,6 +4,6 @@ import TextfieldHealth from './objects/TextfieldHealthView.svelte'
 storiesOf('TextfieldHealth', module).add('Default', () => ({
   Component: TextfieldHealth,
   props: {
-    placeholder: 'Nome',
+    label: 'Nome',
   },
 }))
