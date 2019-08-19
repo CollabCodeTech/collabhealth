@@ -1,6 +1,12 @@
 <script>
   export let required = false
   export let label = 'Label not defined'
+
+  let valid = false
+
+  function handleFocusout({ target }) {
+    target.value !== '' ? (valid = true) : (valid = false)
+  }
 </script>
 
 <style>
@@ -25,7 +31,7 @@
     width: 100%;
     height: var(--size-border-focus);
     transform: scaleX(0) translateY(100%);
-    transition: transform 100ms linear;
+    transition: transform 150ms linear;
   }
 
   .textfield-health:focus-within::after {
@@ -45,7 +51,7 @@
   }
 
   .textfield-health:focus-within > .label,
-  .textfield-health > .input:not(:empty) + .label {
+  .textfield-health.valid > .label {
     color: var(--color-primary-900);
     transform: scale(0.75) translateY(-10px);
   }
@@ -58,12 +64,15 @@
     transition: transform 100ms linear;
   }
 
-  .textfield-health:focus-within > .input {
+  .textfield-health:focus-within > .input,
+  .textfield-health.valid > .input {
     transform: translateY(8px);
   }
 </style>
 
-<label class="textfield-health">
-  <input class="input" type="text" {required} />
+<label
+  class={`textfield-health ${valid ? 'valid' : ''}`}
+  on:focusout={handleFocusout}>
   <span class="label">{label}</span>
+  <input class="input" type="text" {required} />
 </label>
