@@ -1,4 +1,7 @@
 :root {
+  --size-border: 1px;
+  --size-border-focus: 2px;
+
   --size-zero: 10px;
   --size-first: 1.2rem;
   --size-second: 1.4rem;
