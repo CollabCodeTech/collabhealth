@@ -3,6 +3,7 @@
   export let label = 'Label not defined'
   export let type = 'text'
   export let className = ''
+  export let dark = false
 
   let fill = false
   let valid = true
@@ -24,21 +25,36 @@
 
 <style>
   .textfield-health {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     background-color: var(--color-gray-light);
-    color: var(--color-black-disabled);
     font-size: var(--size-third);
     font-weight: normal;
     border-radius: var(--gap-radius) var(--gap-radius) 0 0;
     padding: var(--gap-second);
     border-bottom: var(--size-border) solid var(--color-black-disabled);
     margin-bottom: var(--gap-second);
+    cursor: text;
+  }
+
+  .textfield-health:focus-within {
+    border-bottom-color: var(--color-primary-500);
   }
 
   .textfield-health.invalid {
     border-bottom-color: var(--color-error-light);
   }
+
+  .dark.textfield-health {
+    background-color: var(--color-dark-black-light);
+    border-bottom-color: var(--color-dark-light);
+  }
+
+  .dark.textfield-health:focus-within {
+    border-bottom-color: var(--color-primary-300);
+  }
+
   .textfield-health::after {
     content: '';
     background-color: var(--color-black-disabled);
@@ -47,13 +63,18 @@
     left: 0;
     width: 100%;
     height: var(--size-border-focus);
-    transform: scaleX(0) translateY(100%);
+    transform: scaleX(0);
     transition: transform 150ms linear;
   }
 
   .textfield-health:focus-within::after {
-    transform: scaleX(1) translateY(100%);
-    background-color: var(--color-primary-900);
+    transform: scaleX(1);
+    background-color: var(--color-primary-500);
+  }
+
+  .dark.textfield-health:focus-within::after {
+    transform: scaleX(1);
+    background-color: var(--color-primary-300);
   }
 
   .textfield-health.invalid::after {
@@ -63,8 +84,12 @@
   .textfield-health > .label {
     position: absolute;
     left: var(--gap-second);
-    transition: transform 100ms linear;
+    color: var(--color-black-disabled);
     transform-origin: left top;
+    transition: transform 100ms linear;
+  }
+  .dark.textfield-health > .label {
+    color: var(--color-dark-light);
   }
 
   .textfield-health.invalid > .label {
@@ -81,8 +106,13 @@
 
   .textfield-health:focus-within > .label,
   .textfield-health.fill > .label {
-    color: var(--color-primary-900);
+    color: var(--color-primary-500);
     transform: scale(0.75) translateY(-10px);
+  }
+
+  .dark.textfield-health:focus-within > .label,
+  .dark.textfield-health.fill > .label {
+    color: var(--color-dark-light);
   }
 
   .textfield-health.invalid:focus-within > .label,
@@ -97,6 +127,12 @@
     line-height: 1.4em;
     transform-origin: left bottom;
     transition: transform 100ms linear;
+    color: var(--color-black-high-emphasis);
+  }
+
+  .dark.textfield-health > .input {
+    caret-color: var(--color-dark-white-extra);
+    color: var(--color-dark-white-extra);
   }
 
   .textfield-health > .input:focus {
@@ -128,7 +164,10 @@
 </style>
 
 <label
-  class={`${className} textfield-health ${fill ? 'fill' : ''} ${valid ? '' : 'invalid'} ${animation ? 'animation' : ''}`}
+  class={`${className} textfield-health 
+          ${fill ? 'fill' : ''} ${valid ? '' : 'invalid'} 
+          ${animation ? 'animation' : ''}
+          ${dark ? 'dark' : ''}`}
   on:focusout={handleFocusout}
   on:focusin={handleFocusin}>
   <span class="label">{label}</span>

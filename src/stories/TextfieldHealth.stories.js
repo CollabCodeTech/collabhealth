@@ -8,6 +8,13 @@ storiesOf('TextfieldHealth', module)
       label: 'Name',
     },
   }))
+  .add('Dark Default', () => ({
+    Component: TextfieldHealth,
+    props: {
+      label: 'Name',
+      dark: true,
+    },
+  }))
   .add('Required', () => ({
     Component: TextfieldHealth,
     props: {

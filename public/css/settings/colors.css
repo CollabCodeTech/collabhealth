@@ -36,4 +36,12 @@
   --color-gray-dark: rgba(0, 0, 0, 0.24);
   --color-gray-light: rgba(0, 0, 0, 0.04);
   --color-gray-divider: #e5e5e5;
+
+  --color-dark-light: #56657f;
+
+  --color-dark-white: #8997b1;
+  --color-dark-white-extra: #afbdd1;
+
+  --color-dark-black: #212936;
+  --color-dark-black-light: #2b3648;
 }
