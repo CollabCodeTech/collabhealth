@@ -25,7 +25,7 @@
     width: 100%;
     height: var(--size-border-focus);
     transform: scaleX(0) translateY(100%);
-    transition: transform 200ms linear;
+    transition: transform 100ms linear;
   }
 
   .textfield-health:focus-within::after {
@@ -36,7 +36,7 @@
   .textfield-health > .label {
     position: absolute;
     left: var(--gap-second);
-    transition: transform 200ms linear;
+    transition: transform 100ms linear;
     transform-origin: left top;
   }
 
@@ -55,7 +55,7 @@
     width: 100%;
     height: 100%;
     transform-origin: left bottom;
-    transition: transform 200ms linear;
+    transition: transform 100ms linear;
   }
 
   .textfield-health:focus-within > .input {
