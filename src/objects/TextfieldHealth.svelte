@@ -1,11 +1,12 @@
 <script>
   export let required = false
   export let label = 'Label not defined'
+  export let type = 'text'
 
-  let valid = false
+  let fill = false
 
-  function handleFocusout({ target }) {
-    target.value !== '' ? (valid = true) : (valid = false)
+  function handleFocusout({ target: { value } }) {
+    value !== '' ? (fill = true) : (fill = false)
   }
 </script>
 
@@ -51,7 +52,7 @@
   }
 
   .textfield-health:focus-within > .label,
-  .textfield-health.valid > .label {
+  .textfield-health.fill > .label {
     color: var(--color-primary-900);
     transform: scale(0.75) translateY(-10px);
   }
@@ -65,14 +66,14 @@
   }
 
   .textfield-health:focus-within > .input,
-  .textfield-health.valid > .input {
+  .textfield-health.fill > .input {
     transform: translateY(8px);
   }
 </style>
 
 <label
-  class={`textfield-health ${valid ? 'valid' : ''}`}
+  class={`textfield-health ${fill ? 'fill' : ''}`}
   on:focusout={handleFocusout}>
   <span class="label">{label}</span>
-  <input class="input" type="text" {required} />
+  <input class="input" {type} {required} />
 </label>
