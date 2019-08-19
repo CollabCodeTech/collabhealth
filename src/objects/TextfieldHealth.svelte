@@ -55,6 +55,10 @@
     border-bottom-color: var(--color-primary-300);
   }
 
+  .dark.textfield-health.invalid {
+    border-bottom-color: var(--color-dark-error-light);
+  }
+
   .textfield-health::after {
     content: '';
     background-color: var(--color-black-disabled);
@@ -77,8 +81,8 @@
     background-color: var(--color-primary-300);
   }
 
-  .textfield-health.invalid::after {
-    background-color: var(--color-error-light);
+  .dark.textfield-health.invalid::after {
+    background-color: var(--color-dark-error-light);
   }
 
   .textfield-health > .label {
@@ -88,9 +92,6 @@
     transform-origin: left top;
     transition: transform 100ms linear;
   }
-  .dark.textfield-health > .label {
-    color: var(--color-dark-light);
-  }
 
   .textfield-health.invalid > .label {
     color: var(--color-error-light);
@@ -98,6 +99,14 @@
 
   .textfield-health.animation.invalid > .label {
     animation: labelError 200ms ease-in;
+  }
+
+  .dark.textfield-health > .label {
+    color: var(--color-dark-light);
+  }
+
+  .dark.textfield-health.invalid > .label {
+    color: var(--color-dark-error-light);
   }
 
   .textfield-health > .label::selection {
@@ -118,6 +127,11 @@
   .textfield-health.invalid:focus-within > .label,
   .textfield-health.invalid.fill > .label {
     color: var(--color-error-light);
+  }
+
+  .dark.textfield-health.invalid:focus-within > .label,
+  .dark.textfield-health.invalid.fill > .label {
+    color: var(--color-dark-error-light);
   }
 
   .textfield-health > .input {

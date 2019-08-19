@@ -23,3 +23,12 @@ storiesOf('TextfieldHealth', module)
       type: 'email',
     },
   }))
+  .add('Dark Required', () => ({
+    Component: TextfieldHealth,
+    props: {
+      label: 'Email',
+      required: true,
+      type: 'email',
+      dark: true,
+    },
+  }))
