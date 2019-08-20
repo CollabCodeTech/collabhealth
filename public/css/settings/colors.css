@@ -1,0 +1,50 @@
+:root {
+  --color-primary-900: #4a148c;
+  --color-primary-800: #6a1b9a;
+  --color-primary-700: #7b1fa2;
+  --color-primary-600: #8e24aa;
+  --color-primary-500: #9c27b0;
+  --color-primary-400: #ab47bc;
+  --color-primary-300: #ba68c8;
+  --color-primary-200: #ce93d8;
+  --color-primary-100: #e1bee7;
+  --color-primary-50: #f3e5f5;
+
+  --color-error-dark: #c62828;
+  --color-error-light: #e53935;
+  --color-error-lightest: #fce7e7;
+
+  --color-warning-dark: #ffa000;
+  --color-warning-light: #ffc107;
+
+  --color-success-dark: #00c853;
+  --color-success-light: #00e676;
+
+  --color-black-high-emphasis: rgba(0, 0, 0, 0.87);
+  --color-black-medium-emphasis: rgba(0, 0, 0, 0.6);
+  --color-black-disabled: #9e9e9e;
+  --color-black-inactive: rgba(0, 0, 0, 0.54);
+
+  --color-white-high-emphasis: #ffffff;
+  --color-white-medium-emphasis: rgba(255, 255, 255, 0.7);
+  --color-white-disabled: rgba(255, 255, 255, 0.5);
+  --color-white-inactive: rgba(255, 255, 255, 0.54);
+
+  --color-background-dark: #e8e8e8;
+  --color-background-light: #fafafa;
+
+  --color-gray-dark: rgba(0, 0, 0, 0.24);
+  --color-gray-light: rgba(0, 0, 0, 0.04);
+  --color-gray-divider: #e5e5e5;
+
+  --color-dark-light: #56657f;
+
+  --color-dark-white: #8997b1;
+  --color-dark-white-extra: #afbdd1;
+
+  --color-dark-black: #212936;
+  --color-dark-black-light: #2b3648;
+
+  --color-dark-error-dark: #c03838;
+  --color-dark-error-light: #e44947;
+}

@@ -1,11 +1,3 @@
 <script>
-  import TextfieldHealth from './components/atoms/TextfieldHealth.svelte'
+  import TextfieldHealth from './objects/TextfieldHealth.svelte'
 </script>
-
-<style>
-  h1 {
-    color: purple;
-  }
-</style>
-
-<TextfieldHealth placeholder="Equipamento" />

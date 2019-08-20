@@ -1,0 +1,15 @@
+:root {
+  --size-border: 1px;
+  --size-border-focus: 2px;
+
+  --size-zero: 10px;
+  --size-first: 12px;
+  --size-second: 14px;
+  --size-third: 16px;
+  --size-fourth: 20px;
+  --size-fifth: 24px;
+  --size-sixth: 34px;
+  --size-seventh: 48px;
+  --size-eighth: 60px;
+  --size-nineth: 96px;
+}
