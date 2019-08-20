@@ -78,6 +78,10 @@
     background-color: var(--color-primary-500);
   }
 
+  .textfield-health.invalid::after {
+    background-color: var(--color-error-light);
+  }
+
   .dark.textfield-health:focus-within::after {
     transform: scaleX(1);
     background-color: var(--color-primary-300);
