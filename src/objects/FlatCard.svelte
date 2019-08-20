@@ -1,5 +1,7 @@
 <script>
   export let dark = false
+
+  console.log(dark)
 </script>
 
 <style>
@@ -8,6 +10,11 @@
     border-radius: var(--gap-radius);
     width: 320px;
     height: 320px;
+  }
+
+  .dark.flat-card {
+    background-color: var(--color-dark-black);
+    border-color: var(--color-dark-divider);
   }
 </style>
 

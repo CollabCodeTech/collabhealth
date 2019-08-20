@@ -6,11 +6,13 @@
 
 <style>
   div {
+    display: flex;
+    justify-content: center;
     height: 100vh;
     padding: 10vh 20vw;
   }
   .dark {
-    background-color: var(--color-dark-black);
+    background-color: var(--color-dark-black-light);
   }
 </style>
 
