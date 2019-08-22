@@ -1,6 +1,6 @@
 <script>
-  export let content
-  export let dark
+  export let content = 'content not defined'
+  export let dark = false
 </script>
 
 <style>
@@ -10,6 +10,10 @@
     font-size: var(--size-fourth);
     line-height: 1.5em;
     letter-spacing: var(--letter-spacing-fourth);
+  }
+
+  .title-health.dark {
+    color: var(--color-dark-white-extra);
   }
 </style>
 
