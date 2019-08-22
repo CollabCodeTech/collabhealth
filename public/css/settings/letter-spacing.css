@@ -1,0 +1,12 @@
+:root {
+  --letter-spacing-zero: -1.5px;
+  --letter-spacing-first: -0.5px;
+  --letter-spacing-second: 0px;
+  --letter-spacing-third: 0.1px;
+  --letter-spacing-fourth: 0.15px;
+  --letter-spacing-sixth: 0.25px;
+  --letter-spacing-seventh: 0.4px;
+  --letter-spacing-eighth: 0.5px;
+  --letter-spacing-nineth: 1.25px;
+  --letter-spacing-tenth: 1.5px;
+}

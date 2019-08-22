@@ -52,6 +52,6 @@ const newViewports = {
   },
 }
 
-addParameters({ viewport: { viewports: newViewports } })
+addParameters({ viewport: { viewports: newViewports }, options: {} })
 
 configure(loadStories, module)

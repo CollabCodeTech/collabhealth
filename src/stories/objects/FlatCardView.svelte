@@ -1,21 +1,19 @@
 <script>
+  import Section from '../util/Sections.svelte'
+  import FlatCard from '../../objects/FlatCard.svelte'
+
   export let dark
 
-  import FlatCard from '../../objects/FlatCard.svelte'
+  const config = {
+    title: 'Flat Card',
+    darkLight: dark,
+    description:
+      'É um object mais usado para envolver outros objects ou compents, usamos a tab article nele',
+    exampleImport: "import FlatCard from './FlatCard.svelte'",
+    exampleUse: `<FlatCard dark={${dark}} />`,
+  }
 </script>
 
-<style>
-  div {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    padding: 10vh 20vw;
-  }
-  .dark {
-    background-color: var(--color-dark-black-light);
-  }
-</style>
-
-<div class={`${dark ? 'dark' : ''}`}>
+<Section {...config} class={`${dark ? 'dark' : ''}`}>
   <FlatCard {dark} />
-</div>
+</Section>
