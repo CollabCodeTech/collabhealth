@@ -1,23 +1,23 @@
 <script>
-  export let label
-  export let required
-  export let type
-  export let dark
-  export let messageError
+  import Section from '../util/Sections.svelte'
+  import TextfieldHealth from '../../objects/TextfieldHealth.svelte'
 
-  import TextfieldHealph from '../../objects/TextfieldHealth.svelte'
+  export let label
+  export let required = false
+  export let type = 'text'
+  export let dark = false
+  export let messageError = false
+
+  const config = {
+    title: 'Textfield',
+    dark: dark,
+    description:
+      'Usamos para pegar informação do usuário dentro de um formulario',
+    exampleImport: "import TextfieldHealth from './TextfieldHealth.svelte'",
+    exampleUse: `<TextfieldHealth label='${label}' required={${required}} type='${type}' dark={${dark}} messageError={${messageError}} />`,
+  }
 </script>
 
-<style>
-  div {
-    height: 100vh;
-    padding: 10vh 20vw;
-  }
-  .dark {
-    background-color: var(--color-dark-black);
-  }
-</style>
-
-<div class={`${dark ? 'dark' : ''}`}>
-  <TextfieldHealph {label} {required} {type} {dark} {messageError} />
-</div>
+<Section {...config}>
+  <TextfieldHealth {label} {required} {type} {dark} {messageError} />
+</Section>
