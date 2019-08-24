@@ -12,10 +12,10 @@
     description:
       'Usamos esse obejct como call to action normalmente dentro de um form',
     exampleImport: `import ContainedButton from './ContainedButton.svelte'`,
-    exampleUse: `<ContainedButton content='${content}' disabled='${disabled}' />`,
+    exampleUse: `<ContainedButton content='${content}' disabled={${disabled}} dark={${dark}} />`,
   }
 </script>
 
 <Section {...config}>
-  <ContainedButton {content} {disabled} />
+  <ContainedButton {content} {disabled} {dark} />
 </Section>

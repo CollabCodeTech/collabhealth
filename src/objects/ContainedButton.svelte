@@ -31,11 +31,19 @@
     transition: background-color 200ms linear, box-shadow 200ms linear;
   }
 
+  .contained-button.dark {
+    box-shadow: none;
+  }
+
   .contained-button:disabled {
     background-color: var(--color-black-disabled);
     color: var(--color-white-disabled);
     box-shadow: none;
     cursor: auto;
+  }
+
+  .contained-button.dark:disabled {
+    background-color: var(--color-black-disabled);
   }
 
   .contained-button:not(:disabled):hover {

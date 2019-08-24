@@ -15,3 +15,18 @@ storiesOf('ContainedButton', module)
       disabled: true,
     },
   }))
+  .add('Dark default', () => ({
+    Component: ContainedButton,
+    props: {
+      content: 'Enviar',
+      dark: true,
+    },
+  }))
+  .add('Dark default disabled', () => ({
+    Component: ContainedButton,
+    props: {
+      content: 'Enviar',
+      disabled: true,
+      dark: true,
+    },
+  }))
