@@ -2,7 +2,7 @@
   import Section from '../util/Sections.svelte'
   import FlatCard from '../../objects/FlatCard.svelte'
 
-  export let dark
+  export let dark = false
 
   const config = {
     title: 'Flat Card',

@@ -1,5 +1,6 @@
 <script>
   export let content = 'content not defined'
+  export let disabled = false
 </script>
 
 <style>
@@ -31,12 +32,17 @@
     transform: scaleX(0.5);
     transition: all 200ms cubic-bezier(0, 0, 0.84, 1.65);
   }
-  .text-button:hover::after {
+
+  .text-button:hover:not(:disabled)::after {
     border-radius: var(--border-radius-focus);
     opacity: 1;
     background-color: var(--color-primary-50);
     transform: scaleX(1);
   }
+
+  .text-button:disabled {
+    color: var(--color-black-disabled);
+  }
 </style>
 
-<button class="text-button">{content}</button>
+<button class="text-button" {disabled}>{content}</button>
