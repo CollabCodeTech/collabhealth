@@ -30,6 +30,8 @@
   --color-white-disabled: rgba(255, 255, 255, 0.5);
   --color-white-inactive: rgba(255, 255, 255, 0.54);
 
+  --color-white-light: rgba(255, 255, 255, 0.32);
+
   --color-background-dark: #e8e8e8;
   --color-background-light: #fafafa;
 
