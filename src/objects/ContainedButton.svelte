@@ -1,5 +1,6 @@
 <script>
   export let content = 'content not defined'
+  export let disabled = false
   let active = false
 
   function handleClick() {
@@ -30,12 +31,20 @@
     transition: background-color 200ms linear, box-shadow 200ms linear;
   }
 
-  .contained-button:hover {
+  .contained-button:disabled {
+    background-color: var(--color-black-disabled);
+    color: var(--color-white-disabled);
+    box-shadow: none;
+    cursor: auto;
+  }
+
+  .contained-button:not(:disabled):hover {
     background-color: var(--color-primary-400);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
       0px 1px 5px rgba(0, 0, 0, 0.2);
   }
-  .contained-button::after {
+
+  .contained-button:not(:disabled)::after {
     content: '';
     position: absolute;
     width: 128px;
@@ -46,7 +55,7 @@
     transition: transform 200ms linear;
     opacity: 0;
   }
-  .contained-button.active::after {
+  .contained-button.active:not(:disabled)::after {
     animation: bubble 400ms linear;
   }
 
@@ -65,6 +74,7 @@
 <button
   class={`contained-button ${active && 'active'}`}
   on:click|preventDefault={handleClick}
-  on:animationend={handleAnimationend}>
+  on:animationend={handleAnimationend}
+  {disabled}>
   {content}
 </button>

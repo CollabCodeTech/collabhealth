@@ -4,6 +4,7 @@
 
   export let content
   export let dark = false
+  export let disabled = false
 
   const config = {
     title: 'Contained Button',
@@ -11,10 +12,10 @@
     description:
       'Usamos esse obejct como call to action normalmente dentro de um form',
     exampleImport: `import ContainedButton from './ContainedButton.svelte'`,
-    exampleUse: `<ContainedButton content='${content}' />`,
+    exampleUse: `<ContainedButton content='${content}' disabled='${disabled}' />`,
   }
 </script>
 
 <Section {...config}>
-  <ContainedButton {content} />
+  <ContainedButton {content} {disabled} />
 </Section>
