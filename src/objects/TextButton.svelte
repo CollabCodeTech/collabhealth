@@ -1,6 +1,7 @@
 <script>
   export let content = 'content not defined'
   export let disabled = false
+  export let dark = false
 </script>
 
 <style>
@@ -17,6 +18,10 @@
     padding: var(--gap-zero) var(--gap-first);
     cursor: pointer;
     transition: background-color 150ms linear;
+    z-index: 1;
+  }
+  .text-button.dark {
+    color: var(--color-dark-light);
   }
 
   .text-button::after {
@@ -34,10 +39,14 @@
   }
 
   .text-button:hover:not(:disabled)::after {
-    border-radius: var(--border-radius-focus);
+    border-radius: var(--size-border-focus);
     opacity: 1;
     background-color: var(--color-primary-50);
     transform: scaleX(1);
+  }
+
+  .text-button.dark:hover:not(:disabled)::after {
+    background-color: var(--color-dark-white-extra);
   }
 
   .text-button:disabled {
@@ -45,4 +54,6 @@
   }
 </style>
 
-<button class="text-button" {disabled}>{content}</button>
+<button class={`text-button ${dark ? 'dark' : ''}`} {disabled}>
+  {content}
+</button>
