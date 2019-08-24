@@ -34,9 +34,9 @@
     font-size: var(--size-third);
     font-weight: normal;
     border-radius: var(--gap-radius) var(--gap-radius) 0 0;
-    padding: var(--gap-second);
+    padding: var(--gap-third);
     border-bottom: var(--size-border) solid var(--color-black-disabled);
-    margin-bottom: var(--gap-second);
+    margin-bottom: var(--gap-third);
     cursor: text;
   }
 
@@ -93,7 +93,7 @@
 
   .textfield-health > .label {
     position: absolute;
-    left: var(--gap-second);
+    left: var(--gap-third);
     color: var(--color-black-disabled);
     transform-origin: left top;
     transition: transform 100ms linear;

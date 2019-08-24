@@ -1,7 +1,8 @@
 :root {
   --gap-radius: 4px;
 
-  --gap-zero: 10px;
-  --gap-first: 12px;
-  --gap-second: 16px;
+  --gap-zero: 8px;
+  --gap-first: 10px;
+  --gap-second: 12px;
+  --gap-third: 16px;
 }
