@@ -22,3 +22,11 @@ storiesOf('TextButton', module)
       dark: 'true',
     },
   }))
+  .add('Dark default disabled', () => ({
+    Component: TextButton,
+    props: {
+      content: 'Remover',
+      disabled: true,
+      dark: true,
+    },
+  }))

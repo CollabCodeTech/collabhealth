@@ -20,7 +20,8 @@
     transition: background-color 150ms linear;
     z-index: 1;
   }
-  .text-button.dark {
+  .text-button.dark,
+  .text-button.dark:disabled {
     color: var(--color-dark-light);
   }
 
@@ -51,6 +52,7 @@
 
   .text-button:disabled {
     color: var(--color-black-disabled);
+    cursor: auto;
   }
 </style>
 
