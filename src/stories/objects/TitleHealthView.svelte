@@ -6,7 +6,7 @@
   import TitleHealth from '../../objects/TitleHealth.svelte'
 
   const config = {
-    title: 'Título',
+    title: 'Title',
     dark,
     description:
       'Tome cuidado ao usar esse object no seu projeto, ele é uam tag h1, recomeno você usar um por página pra não tem problema com SEO',
