@@ -15,5 +15,5 @@
 </script>
 
 <Section {...config} class={`${dark ? 'dark' : ''}`}>
-  <FlatCard {dark} />
+  <FlatCard {dark} style="max-width: 90%; height: 200px;" />
 </Section>

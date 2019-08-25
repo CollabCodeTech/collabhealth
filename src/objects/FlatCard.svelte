@@ -1,5 +1,6 @@
 <script>
   export let dark = false
+  export let style
 
   console.log(dark)
 </script>
@@ -8,8 +9,6 @@
   .flat-card {
     border: var(--size-border) solid var(--color-gray-divider);
     border-radius: var(--gap-radius);
-    width: 320px;
-    height: 320px;
   }
 
   .dark.flat-card {
@@ -18,6 +17,6 @@
   }
 </style>
 
-<article class={`flat-card ${dark ? 'dark' : ''}`}>
+<article class={`flat-card ${dark ? 'dark' : ''}`} {style}>
   <slot />
 </article>
