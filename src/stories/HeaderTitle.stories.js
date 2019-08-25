@@ -8,10 +8,25 @@ storiesOf('HeaderTitle', module)
       content: 'Equipamentos',
     },
   }))
+  .add('Default whith divider', () => ({
+    Component: HeaderTitle,
+    props: {
+      content: 'Equipamentos',
+      divider: true,
+    },
+  }))
   .add('Dark default', () => ({
     Component: HeaderTitle,
     props: {
       content: 'Equipamentos',
       dark: true,
+    },
+  }))
+  .add('Dark default whith divider', () => ({
+    Component: HeaderTitle,
+    props: {
+      content: 'Equipamentos',
+      dark: true,
+      divider: true,
     },
   }))
