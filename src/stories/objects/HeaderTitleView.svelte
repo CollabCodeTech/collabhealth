@@ -7,6 +7,7 @@
 
   const config = {
     title: 'Header title',
+    dark,
     description:
       'Object mais utilizado dentro da tag header, mas você pode usar em outros contexto',
     exampleImport: `import HeaderTitle from './HeaderTitle.svelte'`,

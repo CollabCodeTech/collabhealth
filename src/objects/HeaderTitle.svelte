@@ -11,6 +11,10 @@
     letter-spacing: var(--letter-spacing-fourth);
     color: var(--color-black-high-emphasis);
   }
+
+  .header-title.dark {
+    color: var(--color-dark-white-extra);
+  }
 </style>
 
-<h2 class="header-title">{content}</h2>
+<h2 class={`header-title ${dark && 'dark'}`}>{content}</h2>
